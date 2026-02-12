@@ -1,8 +1,8 @@
 diff --git a/README.md b/README.md
-index 1d67aa17a1cf6065407edb12695c4721ee93cf58..aa1817224fb1169cf56dd9daae8e481db67845b0 100644
+index 1d67aa17a1cf6065407edb12695c4721ee93cf58..13c50096bb681fe0e40386fcf3820c206474cb2f 100644
 --- a/README.md
 +++ b/README.md
-@@ -1 +1,34 @@
+@@ -1 +1,72 @@
 -# elforbrukning
 \ No newline at end of file
 +# Elförbrukning – loggbok
@@ -39,3 +39,41 @@ index 1d67aa17a1cf6065407edb12695c4721ee93cf58..aa1817224fb1169cf56dd9daae8e481d
 +Öppna sedan:
 +
 +`http://localhost:4173`
++
++## Lägga upp projektet på GitHub
++
++Om det "inte funkar att lägga in i GitHub" kan du följa denna säkra checklista från början:
++
++```bash
++# 1) Stå i projektmappen
++cd /workspace/elforbrukning
++
++# 2) Kontrollera att git-repo finns
++git status
++
++# 3) Lägg till och committa ändringar
++git add .
++git commit -m "Uppdatera elförbrukningsloggbok"
++
++# 4) Koppla ditt GitHub-repo (byt URL till din)
++git remote add origin https://github.com/DITT-NAMN/elforbrukning.git
++
++# 5) Pusha upp koden
++git push -u origin HEAD
++```
++
++Om du redan har `origin` satt:
++
++```bash
++git remote -v
++git push
++```
++
++Vanliga fel:
++
++- **`remote origin already exists`**  
++  Kör: `git remote set-url origin https://github.com/DITT-NAMN/elforbrukning.git`
++- **`Authentication failed`**  
++  Logga in i GitHub CLI (`gh auth login`) eller använd Personal Access Token.
++- **`Repository not found`**  
++  Kontrollera att repot finns på GitHub och att URL:en stämmer exakt.
